@@ -19,21 +19,21 @@ function shuffleCrystalValues(){
 function gamePlay(){
 	if(userTotalScore == computerChoice){
 		winCount++;
-		$(#win-counter).text(winCount);
-		$(#win-or-lose).text('You win!');
+		$('#win-counter').text(winCount);
+		$('#win-or-lose').text('You win!');
 		computerChoice = Math.floor(Math.random()*(120 - 19 + 1) + 19);
-		$(#random-number).text(computerChoice);
+		$('#random-number').text(computerChoice);
 		userTotalScore = 0;
-		$(#current-score-counter).text(userTotalScore);
+		$('#current-score-counter').text(userTotalScore);
 		shuffleCrystalValues();
 	} else if(userTotalScore > computerChoice){
 		loseCount++;
-		$(#loss-counter).html(loseCount);
-		$(#win-or-lose).text('You lose!');
+		$('#loss-counter').html(loseCount);
+		$('#win-or-lose').text('You lose!');
 		computerChoice = Math.floor(Math.random()*(120 - 19 + 1) + 19);
-		$(#random-number).text(computerChoice);
+		$('#random-number').text(computerChoice);
 		userTotalScore = 0;
-		$(#current-score-counter).text(userTotalScore);
+		$('#current-score-counter').text(userTotalScore);
 		shuffleCrystalValues();
 	}
 }
